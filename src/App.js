@@ -14,6 +14,7 @@ import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { getLoginStatus } from "./services/authService";
 import { SET_LOGIN } from "./redux/features/auth/authSlice";
+import AddDevice from "./pages/addDevice/AddDevice";
 
 axios.defaults.withCredentials = true
 
@@ -45,6 +46,14 @@ function App() {
           <Dashboard />
         </Layout>
       </Sidebar>}/>
+
+      <Route path="/add-device" element={
+      <Sidebar>
+        <Layout>
+          <AddDevice />
+        </Layout>
+      </Sidebar>}/>
+
     </Routes>
     </BrowserRouter>
   );

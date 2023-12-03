@@ -10,9 +10,9 @@ const menu = [
     requiredRole: null,
   },
   {
-    title: "Dispositivos",
+    title: "Agregar Dispositivo",
     icon: <PiDevices />,
-    path: "/add-product",
+    path: "/add-device",
     requiredRole: "admin",
   },
   {

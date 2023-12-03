@@ -11,7 +11,7 @@ const initialState = {
     email: "",
     phone: "",
     avatar: "",
-    role: "user",
+    role: "",
   },
   userID: ""
 };

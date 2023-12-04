@@ -15,7 +15,7 @@ const useRedirectLoggedOutUser = (path) => {
       dispatch(SET_LOGIN(isLoggedIn));
 
       if (!isLoggedIn) {
-        toast.info("La sesion ha expirado, inica sesion.");
+        toast.info("La sesion ha expirado, inicia sesion.");
         navigate(path);
         return;
       }

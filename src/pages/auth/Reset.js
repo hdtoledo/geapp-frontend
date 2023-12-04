@@ -57,7 +57,7 @@ const Reset = () => {
           <form onSubmit={reset}>
             <input
               type="password"
-              placeholder="New Password"
+              placeholder="Nueva contraseña"
               required
               name="password"
               value={password}
@@ -65,7 +65,7 @@ const Reset = () => {
             />
             <input
               type="password"
-              placeholder="Confirm New Password"
+              placeholder="Confirme la contraseña"
               required
               name="password2"
               value={password2}

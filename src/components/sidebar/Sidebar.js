@@ -1,14 +1,16 @@
-import React, { useState } from 'react'
-import "./sidebar.scss"
+import React, { useState } from 'react';
+import "./sidebar.scss";
 import { GrHostMaintenance } from "react-icons/gr";
 import { HiMenuAlt3 } from "react-icons/hi";
 import menu from '../../data/sidebar';
-import SidebarItem from "./SidebarItemPri"
-import { useNavigate } from "react-router-dom"
+import SidebarItem from "./SidebarItemPri";
+import { useNavigate } from "react-router-dom";
 import { useSelector } from 'react-redux';
+import { selectUserRole } from '../../redux/features/auth/authSlice'; // Importa el selector
 
 const Sidebar = ({children}) => {
-  const userRole = useSelector((state) => state.auth.user.role);
+  // Utiliza el selector selectUserRole para obtener el rol del usuario
+  const userRole = useSelector(selectUserRole);
 
   const filteredMenu = menu.filter((item) => {
     return !item.requiredRole || (userRole && userRole === item.requiredRole);
@@ -46,4 +48,4 @@ const Sidebar = ({children}) => {
   )
 }
 
-export default Sidebar
+export default Sidebar;

@@ -17,6 +17,7 @@ import { SET_LOGIN } from "./redux/features/auth/authSlice";
 import AddDevice from "./pages/addDevice/AddDevice";
 import ListDevice from "./pages/listDevice/ListDevice";
 
+
 axios.defaults.withCredentials = true
 
 
@@ -61,6 +62,8 @@ function App() {
           <ListDevice />
         </Layout>
       </Sidebar>}/>
+
+      
 
     </Routes>
     </BrowserRouter>

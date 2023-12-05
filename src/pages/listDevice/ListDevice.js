@@ -19,7 +19,6 @@ const ListDevice = () => {
     }
   }, [isLoggedIn, isError, message, dispatch]);
 
-  console.log("Los datos son: ",devices.devices[0]);
 
   return (
     <div>

@@ -18,7 +18,7 @@ const DeviceList = ({ devices, isLoading }) => {
         {isLoading && <SpinnerImg />}
 
         <div className="table">
-          {!isLoading && devices.length === 0 ? (
+          {!isLoading && devices.devices.length === 0 ? (
             <p>-- No se encontraron equipos, por favor agregarlos.</p>
           ) : (
             <table>
@@ -60,7 +60,8 @@ const DeviceList = ({ devices, isLoading }) => {
                       </td>
                     </tr>
                   );
-                })}
+                }
+                )}
                
               </tbody>
             </table>

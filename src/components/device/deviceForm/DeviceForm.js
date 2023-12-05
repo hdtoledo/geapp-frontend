@@ -1,6 +1,4 @@
 import React from "react";
-import ReactQuill from "react-quill";
-import "react-quill/dist/quill.snow.css";
 import Card from "../../card/Card";
 
 import "./DeviceForm.scss";
@@ -9,8 +7,6 @@ const DeviceForm = ({
   device,
   deviceImage,
   imagePreview,
-  observaciones,
-  setDescription,
   handleInputChange,
   handleImageChange,
   saveDevice,
@@ -111,14 +107,14 @@ const DeviceForm = ({
           />
 
           <label>Observaciones:</label>
-          <ReactQuill
-            theme="snow"
-            value={observaciones}
-            onChange={setDescription}
-            modules={DeviceForm.modules}
-            formats={DeviceForm.formats}
+          <input
+            type="text"
+            placeholder="Observaciones"
+            name="observaciones"
+            value={device?.observaciones}
+            onChange={handleInputChange}
           />
-          
+         
           <label>Marca Procesador:</label>
           <input
             type="text"

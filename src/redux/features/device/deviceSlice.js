@@ -121,9 +121,9 @@ const deviceSlice = createSlice({
         state.isLoading = false;
         state.isSuccess = true;
         state.isError = false;
-        console.log(action.payload);
+        //console.log(action.payload);
         state.devices.push(action.payload);
-        toast.success("Device added successfully");
+        toast.success("Equipo agregado correctamente.");
       })
       .addCase(createDevice.rejected, (state, action) => {
         state.isLoading = false;
@@ -154,7 +154,7 @@ const deviceSlice = createSlice({
         state.isLoading = false;
         state.isSuccess = true;
         state.isError = false;
-        toast.success("Device deleted successfully");
+        toast.success("Equipo eliminado correctamente!");
       })
       .addCase(deleteDevice.rejected, (state, action) => {
         state.isLoading = false;
@@ -184,7 +184,7 @@ const deviceSlice = createSlice({
         state.isLoading = false;
         state.isSuccess = true;
         state.isError = false;
-        toast.success("Device updated successfully");
+        toast.success("Equipo actualizado correctamente!");
       })
       .addCase(updateDevice.rejected, (state, action) => {
         state.isLoading = false;

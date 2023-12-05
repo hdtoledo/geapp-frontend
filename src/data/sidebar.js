@@ -1,4 +1,4 @@
-import { FaTh, FaUsers, FaRegChartBar, FaCommentAlt } from "react-icons/fa";
+import { FaTh, FaUsers, FaRegChartBar, FaCommentAlt, FaListOl } from "react-icons/fa";
 import { PiDevices } from "react-icons/pi";
 import { TbReportSearch } from "react-icons/tb";
 
@@ -10,20 +10,20 @@ const menu = [
     requiredRole: null,
   },
   {
-    title: "Agregar Dispositivo",
+    title: "Agregar Equipo",
     icon: <PiDevices />,
     path: "/add-device",
     requiredRole: "admin",
   },
   {
-    title: "Usuarios",
-    icon: <FaUsers />,
-    path: "/add-product",
+    title: "Listar Equipos",
+    icon: <FaListOl />,
+    path: "/list-device",
     requiredRole: "admin",
   },
   {
-    title: "Reportes",
-    icon: <TbReportSearch />,
+    title: "Usuarios",
+    icon: <FaUsers />,
     path: "/add-product",
     requiredRole: "admin",
   },
@@ -41,27 +41,6 @@ const menu = [
         path: "/edit-profile",
       },
     ],
-  },
-  {
-    title: "Probando user",
-    icon: <FaRegChartBar />,
-    requiredRole: "user",
-    childrens: [
-      {
-        title: "Perfil",
-        path: "/profile",
-      },
-      {
-        title: "Editar Perfil",
-        path: "/edit-profile",
-      },
-    ],
-  },
-  {
-    title: "Reportar Error",
-    icon: <FaCommentAlt />,
-    path: "/contact-us",
-    requiredRole: null,
   },
 ];
 

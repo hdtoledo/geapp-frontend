@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { toast } from 'react-toastify';
 import DeviceForm from '../../components/device/deviceForm/DeviceForm';
 import { createDevice, selectIsLoading } from '../../redux/features/device/deviceSlice';
 import { useNavigate } from 'react-router-dom';
@@ -59,7 +60,6 @@ const AddDevice = () => {
   const [device, setDevice] = useState(initialState);
   const [deviceImage, setDeviceImage] = useState(null);
   const [imagePreview, setImagePreview] = useState(null);
-  const [observaciones, setDescription] = useState('');
 
   const isLoading = useSelector(selectIsLoading);
 
@@ -82,11 +82,11 @@ const AddDevice = () => {
     });
 
     formData.append('imagen', deviceImage);
-    console.log(...formData);
+    //console.log(...formData);
 
-    //await dispatch(createDevice(formData));
+    await dispatch(createDevice(formData));
 
-    //navigate('/dashboard');
+    navigate('/dashboard');
   };
 
   return (
@@ -97,8 +97,6 @@ const AddDevice = () => {
         device={device}
         deviceImage={deviceImage}
         imagePreview={imagePreview}
-        observaciones={observaciones}
-        setDescription={setDescription}
         handleInputChange={handleInputChange}
         handleImageChange={handleImageChange}
         saveDevice={saveDevice}

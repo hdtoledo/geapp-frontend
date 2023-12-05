@@ -4,6 +4,7 @@ import { selectIsLoggedIn, selectUserRole } from "../../redux/features/auth/auth
 import useRedirectLoggedOutUser from "../../customHook/useRedirectLoggedOutUser";
 import { getDevices, selectIsLoading } from "../../redux/features/device/deviceSlice";
 import DeviceList from "../../components/device/deviceList/DeviceList";
+import ListDeviceUser from "../listDevice/ListDeviceUser";
 
 
 
@@ -46,7 +47,7 @@ const AdminDashboardContent = () => {
 */}
   return (
     <div>
-      <h3>En espera</h3>
+      <h3>Reporte de Equipos</h3>
     </div>
   );
 };
@@ -55,8 +56,8 @@ const AdminDashboardContent = () => {
 const UserDashboardContent = () => {
   return (
     <div>
-      <h3>Contenido para Usuarios Regulares</h3>
-      {/* Agrega aquí el contenido específico para usuarios regulares */}
+      <h3>Reporte de equipos</h3>
+      <ListDeviceUser />
     </div>
   );
 };

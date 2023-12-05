@@ -261,7 +261,6 @@ const DeviceForm = ({
             name="chasisTiene"
             value={device?.chasisTiene}
             onChange={handleInputChange}
-            required
           >
             <option value="">Seleccione una opción:</option>
             <option value="Si">Si</option>

@@ -35,9 +35,9 @@ const DeviceList = ({ devices, isLoading }) => {
                 </tr>
               </thead>
               <tbody>
-                {console.log("Los equipos son:", devices)}
-                {/* 
-                {devices.map((device, index) => {
+                
+                
+                {devices.devices.map((device, index) => {
                   const {
                     _id,
                     tipoEquipo,
@@ -61,7 +61,7 @@ const DeviceList = ({ devices, isLoading }) => {
                     </tr>
                   );
                 })}
-               */}
+               
               </tbody>
             </table>
           )}

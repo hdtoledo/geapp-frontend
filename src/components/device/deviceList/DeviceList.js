@@ -18,9 +18,7 @@ const DeviceList = ({ devices, isLoading }) => {
         {isLoading && <SpinnerImg />}
 
         <div className="table">
-          {!isLoading && devices.devices.length === 0 ? (
-            <p>-- No se encontraron equipos, por favor agregarlos.</p>
-          ) : (
+          
             <table>
               <thead>
                 <tr>
@@ -37,35 +35,11 @@ const DeviceList = ({ devices, isLoading }) => {
               <tbody>
                 
                 
-                {devices.devices.map((device, index) => {
-                  const {
-                    _id,
-                    tipoEquipo,
-                    serieSN,
-                    codigoInterno,
-                    marcaEquipo,
-                    modeloEquipo,
-                    dependencia,
-                  } = device;
-                  return (
-                    <tr key={_id}>
-                      <td>{index + 1}</td>
-                      <td>{tipoEquipo}</td>
-                      <td>{serieSN}</td>
-                      <td>{codigoInterno}</td>
-                      <td>{marcaEquipo}</td>
-                      <td>{modeloEquipo}</td>
-                      <td>{dependencia}</td>
-                      <td>
-                      </td>
-                    </tr>
-                  );
-                }
-                )}
+                
                
               </tbody>
             </table>
-          )}
+          
         </div>
       </div>
     </div>

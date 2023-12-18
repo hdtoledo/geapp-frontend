@@ -21,27 +21,6 @@ const menu = [
     path: "/list-device",
     requiredRole: "admin",
   },
-  {
-    title: "Usuarios",
-    icon: <FaUsers />,
-    path: "/add-product",
-    requiredRole: "admin",
-  },
-  {
-    title: "Mi cuenta",
-    icon: <FaRegChartBar />,
-    requiredRole: null,
-    childrens: [
-      {
-        title: "Perfil",
-        path: "/profile",
-      },
-      {
-        title: "Editar Perfil",
-        path: "/edit-profile",
-      },
-    ],
-  },
 ];
 
 

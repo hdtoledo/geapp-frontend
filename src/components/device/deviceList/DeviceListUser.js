@@ -35,33 +35,7 @@ const DeviceListUser = ({ devices, isLoading }) => {
                 </tr>
               </thead>
               <tbody>
-                
-                
-                {devices.devices.map((device, index) => {
-                  const {
-                    _id,
-                    tipoEquipo,
-                    serieSN,
-                    codigoInterno,
-                    marcaEquipo,
-                    modeloEquipo,
-                    dependencia,
-                  } = device;
-                  return (
-                    <tr key={_id}>
-                      <td>{index + 1}</td>
-                      <td>{tipoEquipo}</td>
-                      <td>{serieSN}</td>
-                      <td>{codigoInterno}</td>
-                      <td>{marcaEquipo}</td>
-                      <td>{modeloEquipo}</td>
-                      <td>{dependencia}</td>
-                      <td>
-                      </td>
-                    </tr>
-                  );
-                })}
-               
+
               </tbody>
             </table>
           )}

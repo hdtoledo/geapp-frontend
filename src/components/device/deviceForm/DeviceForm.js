@@ -165,7 +165,7 @@ const DeviceForm = ({
           <label>RAM Frecuencia (MHz):</label>
           <input
             type="text"
-            placeholder="Fecha de Compra"
+            placeholder="RAM Frecuencia (MHz)"
             name="ramFrecuenciaMHz"
             value={device?.ramFrecuenciaMHz}
             onChange={handleInputChange}
@@ -181,7 +181,7 @@ const DeviceForm = ({
           <label>RAM Factor Forma:</label>
           <input
             type="text"
-            placeholder="Fecha de Compra"
+            placeholder="RAM Factor Forma"
             name="ramFactorForma"
             value={device?.ramFactorForma}
             onChange={handleInputChange}

@@ -86,7 +86,7 @@ const AddDevice = () => {
 
     await dispatch(createDevice(formData));
 
-    navigate('/dashboard');
+    navigate('/list-device');
   };
 
   return (

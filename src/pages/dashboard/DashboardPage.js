@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { selectIsLoggedIn, selectUserRole } from "../../redux/features/auth/authSlice";
 import useRedirectLoggedOutUser from "../../customHook/useRedirectLoggedOutUser";
 import { getDevices, selectIsLoading } from "../../redux/features/device/deviceSlice";
-import DeviceList from "../../components/device/deviceList/DeviceList";
 import ListDeviceUser from "../listDevice/ListDeviceUser";
 
 
@@ -29,7 +28,7 @@ const DashboardPage = () => {
 // Componente específico para administradores
 const AdminDashboardContent = () => {
 
-{/*
+
   const dispatch = useDispatch()
   const isLoggedIn = useSelector(selectIsLoggedIn)
   const {devices, isLoading, isError, message} = useSelector((state) => state.device)
@@ -44,10 +43,10 @@ const AdminDashboardContent = () => {
     }
 
   },[isLoggedIn, isError, message, dispatch])
-*/}
+
   return (
     <div>
-      <h3>Reporte de Equipos</h3>
+      <h3>Novedades de equipos</h3>
     </div>
   );
 };

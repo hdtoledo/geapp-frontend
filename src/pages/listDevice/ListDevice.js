@@ -13,6 +13,7 @@ const ListDevice = () => {
     if (isLoggedIn === true) {
       dispatch(getDevices());
     }
+    console.log()
 
     if (isError) {
       console.log(message);
@@ -22,7 +23,7 @@ const ListDevice = () => {
 
   return (
     <div>
-        <h3>Listado de Equipos</h3>
+        <h3>Listar Equipos</h3>
       <DeviceList devices={devices} isLoading={isLoading} />
     </div>
   );

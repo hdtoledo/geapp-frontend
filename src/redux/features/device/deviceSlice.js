@@ -121,8 +121,8 @@ const deviceSlice = createSlice({
         state.isLoading = false;
         state.isSuccess = true;
         state.isError = false;
-        //console.log(action.payload);
-        state.devices.push(action.payload);
+        //console.log('Dispositivos actuales:', state.devices);
+        state.devices = [...state.devices, action.payload]; // Utiliza el operador de propagación
         toast.success("Equipo agregado correctamente.");
       })
       .addCase(createDevice.rejected, (state, action) => {
@@ -138,7 +138,7 @@ const deviceSlice = createSlice({
         state.isLoading = false;
         state.isSuccess = true;
         state.isError = false;
-        console.log(action.payload);
+        //console.log(action.payload);
         state.devices = action.payload;
       })
       .addCase(getDevices.rejected, (state, action) => {

@@ -1,8 +1,17 @@
-import React from 'react';
-import './deviceList.scss';
-import { SpinnerImg } from '../../loader/Loader';
+import React from "react";
+import { SpinnerImg } from "../../loader/Loader";
+import "./deviceList.scss";
 
 const DeviceList = ({ devices, isLoading }) => {
+
+  const shortenText = (text, n) => {
+    if (text.length > n) {
+      const shortenedText = text.substring(0, n).concat("...");
+      return shortenedText;
+    }
+    return text;
+  };
+
   return (
     <div className="device-list">
       <hr />
@@ -18,7 +27,9 @@ const DeviceList = ({ devices, isLoading }) => {
         {isLoading && <SpinnerImg />}
 
         <div className="table">
-          
+          {!isLoading && devices.lenght === 0 ? (
+            <p> --Dispositivos no encontrados, por añada dispositivos.</p>
+          ) : (
             <table>
               <thead>
                 <tr>
@@ -33,13 +44,27 @@ const DeviceList = ({ devices, isLoading }) => {
                 </tr>
               </thead>
               <tbody>
-                
-                
-                
-               
+                {
+                  devices.map((device, index) => {
+                    const { _id, tipoEquipo, serieSN, codigoInterno, marcaEquipo, modeloEquipo, dependencia } = device
+                    return (
+                      <tr key={_id}>
+                        <td>{index + 1}</td>
+                        <td>{shortenText(tipoEquipo, 16)}</td>
+                        <td>{serieSN}</td>
+                        <td>{codigoInterno}</td>
+                        <td>{marcaEquipo}</td>
+                        <td>{modeloEquipo}</td>
+                        <td>{dependencia}</td>
+                        <td>Boton</td>
+
+                      </tr>
+                    )
+                  })
+                }
               </tbody>
             </table>
-          
+          )}
         </div>
       </div>
     </div>

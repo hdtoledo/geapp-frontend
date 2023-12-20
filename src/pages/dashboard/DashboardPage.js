@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { selectIsLoggedIn, selectUserRole } from "../../redux/features/auth/authSlice";
 import useRedirectLoggedOutUser from "../../customHook/useRedirectLoggedOutUser";
-import { getDevices, selectIsLoading } from "../../redux/features/device/deviceSlice";
+import { getDevices } from "../../redux/features/device/deviceSlice";
 import ListDeviceUser from "../listDevice/ListDeviceUser";
 
 
@@ -31,7 +31,7 @@ const AdminDashboardContent = () => {
 
   const dispatch = useDispatch()
   const isLoggedIn = useSelector(selectIsLoggedIn)
-  const {devices, isLoading, isError, message} = useSelector((state) => state.device)
+  const { isError, message} = useSelector((state) => state.device)
 
   useEffect(() => {
     if (isLoggedIn === true) {

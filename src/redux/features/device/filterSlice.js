@@ -12,8 +12,12 @@ const filterSlice = createSlice({
       const { devices, search } = action.payload;
       const tempDevices = devices.filter(
         (device) =>
-          device.name.toLowerCase().includes(search.toLowerCase()) ||
-          device.category.toLowerCase().includes(search.toLowerCase())
+          device.tipoEquipo.toLowerCase().includes(search.toLowerCase()) ||
+          device.serieSN.toLowerCase().includes(search.toLowerCase()) ||
+          device.codigoInterno.toLowerCase().includes(search.toLowerCase()) ||
+          device.marcaEquipo.toLowerCase().includes(search.toLowerCase()) ||
+          device.modeloEquipo.toLowerCase().includes(search.toLowerCase()) ||
+          device.dependencia.toLowerCase().includes(search.toLowerCase())
       );
 
       state.filteredDevices = tempDevices;

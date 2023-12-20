@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { selectIsLoggedIn, selectUserRole, } from "../../redux/features/auth/authSlice";
-import { getDevices, selectIsLoading } from "../../redux/features/device/deviceSlice";
+import { selectIsLoggedIn } from "../../redux/features/auth/authSlice";
+import { getDevices } from "../../redux/features/device/deviceSlice";
 import DeviceList from "../../components/device/deviceList/DeviceList";
 
 const ListDevice = () => {

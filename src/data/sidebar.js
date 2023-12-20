@@ -1,6 +1,5 @@
-import { FaTh, FaUsers, FaRegChartBar, FaCommentAlt, FaListOl } from "react-icons/fa";
+import { FaTh, FaListOl } from "react-icons/fa";
 import { PiDevices } from "react-icons/pi";
-import { TbReportSearch } from "react-icons/tb";
 
 const menu = [
   {

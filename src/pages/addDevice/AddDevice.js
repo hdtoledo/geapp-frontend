@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { toast } from 'react-toastify';
 import DeviceForm from '../../components/device/deviceForm/DeviceForm';
 import { createDevice, selectIsLoading } from '../../redux/features/device/deviceSlice';
 import { useNavigate } from 'react-router-dom';

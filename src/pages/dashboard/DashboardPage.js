@@ -48,7 +48,7 @@ const AdminDashboardContent = () => {
   return (
     <div>
       <h3>Reportes de equipos</h3>
-      <ListDevice />
+      <ReportDevices />
     </div>
   );
 };

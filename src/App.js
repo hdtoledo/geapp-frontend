@@ -16,7 +16,7 @@ import { getLoginStatus } from "./services/authService";
 import { SET_LOGIN } from "./redux/features/auth/authSlice";
 import AddDevice from "./pages/addDevice/AddDevice";
 import ListDevice from "./pages/listDevice/ListDevice";
-import DeviceDetail2 from "./components/device/deviceDetail/DeviceDetail2";
+import DeviceReport from "./components/device/deviceReport/DeviceReport";
 import EditDevice from "./pages/editDevice/EditDevice";
 
 
@@ -65,10 +65,10 @@ function App() {
         </Layout>
       </Sidebar>}/>
 
-      <Route path="/device-detail/:id" element={
+      <Route path="/report-device/:id" element={
       <Sidebar>
         <Layout>
-          <DeviceDetail2 />
+          <DeviceReport />
         </Layout>
       </Sidebar>}/>
 

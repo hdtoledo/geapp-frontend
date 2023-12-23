@@ -4,6 +4,7 @@ import { selectIsLoggedIn, selectUserRole } from "../../redux/features/auth/auth
 import useRedirectLoggedOutUser from "../../customHook/useRedirectLoggedOutUser";
 import { getDevices } from "../../redux/features/device/deviceSlice";
 import ListDeviceUser from "../listDevice/ListDeviceUser";
+import ReportDevices from "../listDevice/ListDevice";
 
 
 
@@ -46,7 +47,8 @@ const AdminDashboardContent = () => {
 
   return (
     <div>
-      <h3>Novedades de equipos</h3>
+      <h3>Reportes de equipos</h3>
+      <ListDevice />
     </div>
   );
 };

@@ -1,0 +1,21 @@
+.map-container {
+    position: relative;
+    width: 80%;  // Establece el ancho al 50% del contenedor padre
+    margin: auto;  // Centra el mapa horizontalmente
+  }
+  
+  .map-image {
+    width: 100%;  // Hace que la imagen ocupe el 100% del contenedor
+    display: block;
+  }
+  
+  .map-button {
+    position: absolute;
+    background-color: #FF4500;  // Color de fondo del botón
+    color: #fff;  // Color del texto del botón
+    border: none;
+    padding: 10px;
+    height: 20px;
+    cursor: pointer;
+    // Otros estilos según sea necesario
+  }

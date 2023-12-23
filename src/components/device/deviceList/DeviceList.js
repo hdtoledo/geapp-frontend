@@ -20,14 +20,6 @@ const DeviceList = ({ devices, isLoading }) => {
 
   const dispatch = useDispatch();
 
-  const shortenText = (text, n) => {
-    if (text.length > n) {
-      const shortenedText = text.substring(0, n).concat("...");
-      return shortenedText;
-    }
-    return text;
-  };
-
   const delDevice = async (id) => {
     //console.log(id);
     await dispatch(deleteDevice(id));
@@ -113,7 +105,7 @@ const DeviceList = ({ devices, isLoading }) => {
                     return (
                       <tr key={_id}>
                         <td>{index + 1}</td>
-                        <td>{shortenText(tipoEquipo, 16)}</td>
+                        <td>{tipoEquipo}</td>
                         <td>{serieSN}</td>
                         <td>{codigoInterno}</td>
                         <td>{marcaEquipo}</td>

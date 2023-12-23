@@ -16,6 +16,12 @@ const DeviceForm = ({
       <Card cardClass={"card"}>
         <form onSubmit={saveDevice}>
           <Card cardClass={"group"}>
+          <label>Nota:</label>
+            <code className="--color-dark">
+            Si se tratan de equipos portatil o todo en uno, hay datos que no se ingresan y se deja con (N/A) de igual manera si no se encuentra algun dato. Nada debe quedar sin responder.
+            </code>
+          </Card><br/>
+          <Card cardClass={"group"}>
             <label>Imagen del dispositivo</label>
             <code className="--color-dark">
               Formatos soportados: jpg, jpeg, png
@@ -33,7 +39,7 @@ const DeviceForm = ({
             ) : (
               <p>Este dispositivo no tiene una imagen.</p>
             )}
-          </Card>
+          </Card><br/>
 
           <label>Tipo de dispositivo:</label>
           <select
@@ -99,7 +105,7 @@ const DeviceForm = ({
 
           <label>Fecha Compra:</label>
           <input
-            type="date"
+            type="text"
             placeholder="Fecha de Compra"
             name="fechaCompra"
             value={device?.fechaCompra}
@@ -483,42 +489,5 @@ const DeviceForm = ({
     </div>
   );
 };
-
-DeviceForm.modules = {
-  toolbar: [
-    [{ header: "1" }, { header: "2" }, { font: [] }],
-    [{ size: [] }],
-    ["bold", "italic", "underline", "strike", "blockquote"],
-    [{ align: [] }],
-    [{ color: [] }, { background: [] }],
-    [
-      { list: "ordered" },
-      { list: "bullet" },
-      { indent: "-1" },
-      { indent: "+1" },
-    ],
-    ["clean"],
-  ],
-};
-DeviceForm.formats = [
-  "header",
-  "font",
-  "size",
-  "bold",
-  "italic",
-  "underline",
-  "strike",
-  "blockquote",
-  "color",
-  "background",
-  "list",
-  "bullet",
-  "indent",
-  "link",
-  "video",
-  "image",
-  "code-block",
-  "align",
-];
 
 export default DeviceForm;

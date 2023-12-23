@@ -16,6 +16,8 @@ import { getLoginStatus } from "./services/authService";
 import { SET_LOGIN } from "./redux/features/auth/authSlice";
 import AddDevice from "./pages/addDevice/AddDevice";
 import ListDevice from "./pages/listDevice/ListDevice";
+import DeviceDetail2 from "./components/device/deviceDetail/DeviceDetail2";
+import EditDevice from "./pages/editDevice/EditDevice";
 
 
 axios.defaults.withCredentials = true
@@ -63,7 +65,19 @@ function App() {
         </Layout>
       </Sidebar>}/>
 
-      
+      <Route path="/device-detail/:id" element={
+      <Sidebar>
+        <Layout>
+          <DeviceDetail2 />
+        </Layout>
+      </Sidebar>}/>
+
+      <Route path="/edit-device/:id" element={
+      <Sidebar>
+        <Layout>
+          <EditDevice />
+        </Layout>
+      </Sidebar>}/>
 
     </Routes>
     </BrowserRouter>

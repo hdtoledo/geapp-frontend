@@ -10,6 +10,7 @@ import ReactPaginate from "react-paginate";
 import { confirmAlert } from "react-confirm-alert";
 import "react-confirm-alert/src/react-confirm-alert.css";
 import { deleteDevice, getDevices } from "../../../redux/features/device/deviceSlice";
+import { Link } from "react-router-dom";
 
 const DeviceList = ({ devices, isLoading }) => {
 
@@ -89,8 +90,8 @@ const DeviceList = ({ devices, isLoading }) => {
         {isLoading && <SpinnerImg />}
 
         <div className="table">
-          {!isLoading && devices.lenght === 0 ? (
-            <p> --Dispositivos no encontrados, por añada dispositivos.</p>
+          {!isLoading && devices.length === 0 ? (
+            <p> --Dispositivos no encontrados, por favor agregar dispositivos.</p>
           ) : (
             <table>
               <thead>
@@ -119,8 +120,7 @@ const DeviceList = ({ devices, isLoading }) => {
                         <td>{modeloEquipo}</td>
                         <td>{dependencia}</td>
                         <td className="icons">
-                          <span><AiOutlineEye size={25} color={"purple"}/></span>
-                          <span><FaEdit size={20} color={"green"}/></span>
+                          <span><Link to={`/edit-device/${_id}`}><FaEdit size={20} color={"green"} /></Link></span>
                           <span><FaTrashAlt size={20} color={"red"} onClick={() => confirmDelete(_id)}/></span>
                         </td>
 
